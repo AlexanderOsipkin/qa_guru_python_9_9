@@ -38,7 +38,9 @@ def test_registration_with_allure_steps():
         browser.element('[for="hobbies-checkbox-1"]').click()
 
     with allure.step("Выбираем и загружаем картинку"):
-        browser.element('#uploadPicture').send_keys(os.path.abspath('pictures/kot-kartinka.jpg'))
+        browser.element('#uploadPicture').send_keys(
+            os.path.abspath('tests/pictures/kot-kartinka.jpg')
+        )
 
     with allure.step("Проверяем что поле Адрес пустое и если это так то вводим " "значение"):
         browser.element('#currentAddress').should(be.blank).type(

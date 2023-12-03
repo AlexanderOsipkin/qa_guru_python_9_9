@@ -79,7 +79,7 @@ def enter_hobby():
 
 @allure.step('Выбираем и загружаем картинку')
 def upload_picture():
-    browser.element('#uploadPicture').send_keys(os.path.abspath('pictures/kot-kartinka.jpg'))
+    browser.element('#uploadPicture').send_keys(os.path.abspath('tests/pictures/kot-kartinka.jpg'))
 
 
 @allure.step('Проверяем что поле Адрес пустое и если это так то вводим значение')
